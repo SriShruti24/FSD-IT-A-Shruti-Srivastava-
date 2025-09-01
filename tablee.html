@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Table Example</title>
+  <style>
+    table {
+      margin: 50px auto;
+      border-collapse: collapse;
+      width: 70%;
+      text-align: center;
+      border: 2px solid black;
+    }
+    td, th {
+      border: 1px solid black;
+      padding: 10px;
+    }
+    button {
+      padding: 6px 12px;
+      border: none;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+   
+
+  </style>
+</head>
+<body>
+  <table>
+    <!-- First row with description -->
+    <tr>
+      <td colspan="4"><b>Description</b></td>
+    </tr>
+
+    <!-- Items rows -->
+    <tr>
+      <td rowspan="3" colspan="2"><b>Items</b></td>
+      <td colspan="2">Milk</td>
+    </tr>
+    <tr>
+      <td colspan="2">Bread</td>
+    </tr>
+    <tr>
+      <td colspan="2">Butter</td>
+    </tr>
+
+    <!-- Price rows -->
+    <tr>
+      <td rowspan="3" colspan="2"><b>Price</b></td>
+      <td colspan="2">20</td>
+    </tr>
+    <tr>
+      <td colspan="2">30</td>
+    </tr>
+    <tr>
+      <td colspan="2">40</td>
+    </tr>
+
+    <!-- Images row -->
+    <tr>
+      <td><p>Images</p></td>
+      <td><img src="milk.jpg" alt="Image2" width="50" height="50"></td>
+      <td><img src="bread.jpg" alt="Image3" width="50" height="50"></td>
+      <td><img src="butter.jpg" alt="Image4" width="50" height="50"></td>
+    </tr>
+
+    <!-- Buttons row -->
+    <tr>
+      <td colspan="2">Add</td>
+      <td colspan="2">Update</td>
+    </tr>
+  </table>
+</body>
+</html>
