@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Bus Booking System</title>
+  <style>
+    .navbar {
+      background-color: cornflowerblue;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 10px 20px;
+    }
+    .navbar img {
+      height: 60px;
+      margin-right: 15px; /* space between logo and title */
+    }
+    .navbar h2 {
+      color: white;
+      margin: 0;
+      font-size: 24px;
+    }
+
+    /* Layout for bus image and form */
+    .content {
+      display: flex;
+      align-items: flex-start;
+      margin-top: 20px;
+      gap: 30px; /* space between image and form */
+    }
+    .content img {
+      width: 250px;
+      height: auto;
+    }
+    .content form table {
+      border-collapse: collapse;
+    }
+    .content td {
+      padding: 5px;
+    }
+    .book-btn {
+      display: inline-block;
+      padding: 8px 15px;
+      background: cornflowerblue;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+    .book-btn:hover {
+      background: royalblue;
+    }
+  .card {
+    border: 2px solid #ccc;     
+    border-radius: 10px;       
+    padding: 20px;          
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); 
+    background-color: #fff; 
+    width: 50%;   
+    height: 300px;
+  }
+  </style>
+</head>
+<body>
+
+  <div class="navbar">
+    <img src="buslogo.jpeg" alt="Bus Logo">
+    <h2>Bus Booking System</h2>
+  </div>
+
+  <h3>Welcome to Bus Booking System</h3>
+
+<div class="card">
+      <div class="content">
+     <form>
+      <table cellpadding="5">
+        <tr>
+          <td>User Name:</td>
+          <td><input type="text" name="username"></td>
+        </tr>
+        <tr>
+          <td>Gender:</td>
+          <td>
+            <select name="gender">
+              <option>Male</option>
+              <option>Female</option>
+              <option>Other</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Select City:</td>
+          <td>
+            <select name="city">
+              <option>Delhi</option>
+              <option>Mumbai</option>
+              <option>Bangalore</option>
+              <option>Kolkata</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>Select Seat:</td>
+          <td>
+            <select name="seat">
+              <option>AC</option>
+              <option>Non-AC</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2" align="center">
+            <a href="payment.html" class="book-btn">Book Now</a>
+          </td>
+        </tr>
+      </table>
+    </form>
+    <img src="download.jpeg" alt="Bus">
+
+   
+  </div>
+</div>
+
+</body>
+</html>
