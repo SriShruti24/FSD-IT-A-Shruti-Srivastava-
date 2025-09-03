@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Card</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      margin: 20px;
+    }
+
+    .card {
+      display: flex;       
+      gap: 20px;               
+    }
+
+    .card > div {
+      background: #fff;
+      border: 1px solid #ccc;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 10px;
+      text-align: center;
+      width: 200px;
+      transition: transform 0.2s;
+    }
+
+
+    .card img {
+      max-width: 100%;
+      border-radius: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="card">
+    <div class="box1">
+      <img src="burger.jpeg" alt="burger">
+      <h3>Burger</h3>
+    </div>
+    <div class="box2">
+      <img src="coldcoffe.jpeg" alt="cold coffee">
+      <h3>Cold Coffee</h3>
+    </div>
+    <div class="box3">
+      <img src="peri_peri.jpeg" alt="peri peri fries">
+      <h3>Peri Peri Fries</h3>
+    </div>
+  </div>
+</body>
+</html>
