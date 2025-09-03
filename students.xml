@@ -1,0 +1,33 @@
+<!DOCTYPE students SYSTEM "students.dtd">
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE students SYSTEM "students.dtd">
+<students>
+  <student rollno="S001" gender="Female">
+    <name>Shruti Srivastava</name>
+    <dob>2003-09-12</dob>
+    <email>shruti@example.com</email>
+    <address>Lucknow, India</address>
+
+    <course code="CS101">Introduction to CS</course>
+    <course code="MA101">Calculus I</course>
+
+    <marks>
+      <total>186</total>
+      <grade>A</grade>
+    </marks>
+  </student>
+
+  <student rollno="S002" gender="Male">
+    <name>Arjun Verma</name>
+    <dob>2002-02-05</dob>
+    <email>arjun.verma@example.org</email>
+
+    <course code="PH101">Physics I</course>
+    <course code="EE101">Basic Electrical</course>
+
+    <marks>
+      <total>172</total>
+      <grade>B+</grade>
+    </marks>
+  </student>
+</students>
