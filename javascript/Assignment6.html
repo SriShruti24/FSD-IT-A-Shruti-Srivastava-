@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cards Example</title>
+    <style>
+        body {
+            display: flex;
+            flex-direction: row;
+            gap: 20px;
+            justify-content: center;
+            align-items: flex-start;
+            margin-top: 30px;
+            font-family: Arial, sans-serif;
+        }
+        .card {
+            width: 400px;
+            height: 350px;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            padding: 20px;
+            text-align: center;
+            background: paleturquoise;
+        }
+        .cardimg img {
+            height: 300px;
+            width: 300px;
+            border-radius: 8px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 6px;
+            background: palevioletred;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        button:hover {
+            background: royalblue;
+        }
+    </style>
+</head>
+<body>
+   
+    <div class="card">
+        <div class="cardimg">
+            <img id="img1" src="kk.jpg" alt="Image">
+        </div>
+        <div>
+            <button onclick="hideImage()">HIDE</button>
+        </div>
+    </div>
+
+
+    <div class="card">
+        <div class="cardimg">
+            <img id="img2" src="kk.jpg" alt="Image">
+        </div>
+        <div>
+            <button onclick="changeImage()">CHANGE</button>
+        </div>
+    </div>
+
+    <script>
+        function hideImage() {
+            let img = document.getElementById("img1");
+            if (img.style.display === "none") {
+                img.style.display = "block";  
+            } else {
+                img.style.display = "none";   
+            }
+        }
+
+        function changeImage() {
+            let img = document.getElementById("img2");
+            img.src = img.src.includes("kk.jpg") ? "ee.jpg" : "kk.jpg"; 
+        
+        }
+    </script>
+</body>
+</html>
