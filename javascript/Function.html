@@ -2,22 +2,30 @@
 <html lang="en">
 <head>
     <style>
-        .adi{
-            height: 200px;
-            width: 200px;
-            background-color: aquamarine;
-            border: 2px solid red;
-        }
+        
     </style>
 </head>
-<body>
-    <div class="adi">
+<body id="adi">
+    <button onclick="red()">RED</button>
+    <button onclick="blue()">BLUE</button>
+    <Button onclick="green()">GREEN</Button>
+    <!-- <p id="adi">hello</p> -->
+    <!-- <div class="adi">
         <button onclick="abes()"> Click</button>
         <p id="aa"></p>
-    </div>
+    </div> -->
     <script>
+        function red(){
+            document.getElementById("adi").style.backgroundColor="red";
+        }
+        function blue(){
+            document.getElementById("adi").style.backgroundColor="blue";
+        }
+        function green(){
+            document.getElementById("adi").style.backgroundColor="green";
+        }
         
-        function abes(){
+        /*function abes(){
             document.getElementById("aa").innerHTML="Hello";
         }
         //abes();
@@ -32,7 +40,7 @@
            // var b=10;
             //document.write(`Diff is  ${b-a}`);
         //}
-        //sub();
+        //sub();*/
 
     </script>
     
