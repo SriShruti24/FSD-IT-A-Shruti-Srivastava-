@@ -6,24 +6,56 @@
     <title>Tables of 3 and 4</title>
 </head>
 <body>
-    <h2>Table of 3</h2>
+    <h2 id ="t1">Table</h2>
     <div id="table3"></div>
 
-    <h2>Table of 4</h2>
+    <h2 id ="t2">Table </h2>
     <div id="table4"></div>
+    <h2>EVEN</h2>
+    <div id="e"></div>
+     <h2>ODD</h2>
+    <div id="o"></div>
+
 
     <script>
+         let t1 = prompt("Enter table 1");
+      let t2 = prompt("Enter table 2");
       let table3 = "";
+      document.getElementById("t1").innerHTML = t1;
       for (let i = 1; i <= 10; i++) {
-          table3 += `3 x ${i} = ${3 * i}<br>`;
+          table3 += `${t1} x ${i} = ${t1 * i}<br>`;
       }
-      document.getElementById("table3").innerHTML = table3;
-
+      
+document.getElementById("t2").innerHTML = t2;
       let table4 = "";
       for (let i = 1; i <= 10; i++) {
-          table4 += `4 x ${i} = ${4 * i}<br>`;
+          table4 += `${t2} x ${i} = ${t2 * i}<br>`;
       }
-      document.getElementById("table4").innerHTML = table4;
+      
+      //for even and odd
+    
+      let e="";
+      for(let i=1;i<=10;i++){
+        if((t1*i)%2==0)
+        e+=`${t1*i},`;
+      }
+      document.getElementById("e").innerHTML = e;
+      for(let i=1;i<=10;i++){
+        if((t2*i)%2==0)
+        e+=`${t2*i},`;
+      }
+      document.getElementById("e").innerHTML = e;
+      let o="";
+      for(let i=1;i<=10;i++){
+        if((t1*i)%2!=0)
+        e+=`${t1*i},`;
+      }
+      document.getElementById("o").innerHTML = o;
+      for(let i=1;i<=10;i++){
+        if((t2*i)%2!=0)
+        o+=`${t2*i},`;
+      }
+      document.getElementById("o").innerHTML = o;
     </script>
 </body>
 </html>
