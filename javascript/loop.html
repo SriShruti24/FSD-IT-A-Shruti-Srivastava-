@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tables of 3 and 4</title>
+</head>
+<body>
+    <h2>Table of 3</h2>
+    <div id="table3"></div>
+
+    <h2>Table of 4</h2>
+    <div id="table4"></div>
+
+    <script>
+      let table3 = "";
+      for (let i = 1; i <= 10; i++) {
+          table3 += `3 x ${i} = ${3 * i}<br>`;
+      }
+      document.getElementById("table3").innerHTML = table3;
+
+      let table4 = "";
+      for (let i = 1; i <= 10; i++) {
+          table4 += `4 x ${i} = ${4 * i}<br>`;
+      }
+      document.getElementById("table4").innerHTML = table4;
+    </script>
+</body>
+</html>
