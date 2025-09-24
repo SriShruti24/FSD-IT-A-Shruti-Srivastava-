@@ -37,16 +37,18 @@
       margin-bottom: 15px;
       border: 2px solid black;
     }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 10px;
-    }
-    table td {
-      padding: 8px;
-      border: 1px solid #333;
-      text-align: left;
+    .infoBox {
       background: white;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 12px;
+      margin-top: 12px;
+      text-align: left;
+    }
+    .infoBox b {
+      display: block;
+      margin-bottom: 5px;
+      color: #222;
     }
     .formBox {
       flex: 1;
@@ -81,16 +83,17 @@
     <div class="profile">
       <img src="fashion.jpeg" alt="Profile Image">
       <h2 id="displayName">Your Name (B.Tech IT)</h2>
-      <table>
-        <tr>
-          <td><b>Language</b></td>
-          <td id="displayLanguage">-</td>
-        </tr>
-        <tr>
-          <td><b>Address</b></td>
-          <td id="displayAddress">-</td>
-        </tr>
-      </table>
+
+      <!-- Separate Boxes instead of Table -->
+      <div class="infoBox">
+        <b>Languages</b>
+        <span id="displayLanguage">-</span>
+      </div>
+
+      <div class="infoBox">
+        <b>Address</b>
+        <span id="displayAddress">-</span>
+      </div>
     </div>
 
     <!-- Form Section -->
