@@ -1,0 +1,20 @@
+/* Full page layout */
+.page-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* full screen height */
+}
+
+/* Main grows to push footer down */
+.main-content {
+  flex: 1;
+}
+
+/* Cards layout */
+.card-container {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
