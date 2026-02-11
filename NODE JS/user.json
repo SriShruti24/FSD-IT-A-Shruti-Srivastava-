@@ -1,0 +1,9 @@
+{
+  "name": "John Doe",
+  "course": "B.Tech",
+  "skills": [
+    "JavaScript",
+    "Node.js",
+    "React"
+  ]
+}

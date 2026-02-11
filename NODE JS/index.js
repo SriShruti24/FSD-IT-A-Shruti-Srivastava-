@@ -47,9 +47,39 @@
 // });
 
 // myserver.listen(8000, () => console.log("Server running on port 8000"));
-const fs=require('fs');
+// const fs=require('fs');
+// import { mkdir } from 'node:fs';
 // fs.writeFileSync("./it-a.text","Hello World")
 // fs.writeFileSync("./abes.text","Welcome to ABES Engineering College");
 // const res=fs.readFileSync("./it-a.text","utf-8");
 // console.log(res);
-fs.writeFile("./it-a.text","Hello World",()=>{});
+// fs.writeFile("./it-a.text","Hello World",()=>{});
+// mkdir('./apple.text', { recursive: true }, (err) => {
+//   if (err) throw err;
+// }); 
+// import fs from 'node:fs';
+
+// fs.mkdir('./apple', { recursive: true }, (err) => {
+//   if (err) throw err;
+// });
+const fs = require('fs');
+// const user={
+//     name:"John Doe",
+//     course:"B.Tech",
+//     skills:["JavaScript","Node.js","React"]
+// }
+// fs.writeFile("user.json",JSON.stringify(user,null,2),err=>{
+//     if(err){
+//         console.error("Error writing file:",err);
+//     }else{
+//         console.log("File written successfully");
+//     }
+// })
+fs.readFile("user.json","utf-8",(err,data)=>{
+    if(err){
+        console.error("Error reading file:",err);
+    }else{
+        const user=JSON.parse(data);
+        console.log("User data:",user);
+    }
+})
