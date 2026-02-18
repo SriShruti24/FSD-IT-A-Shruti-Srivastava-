@@ -62,7 +62,6 @@
 // fs.mkdir('./apple', { recursive: true }, (err) => {
 //   if (err) throw err;
 // });
-const fs = require('fs');
 // const user={
 //     name:"John Doe",
 //     course:"B.Tech",
@@ -75,11 +74,24 @@ const fs = require('fs');
 //         console.log("File written successfully");
 //     }
 // })
-fs.readFile("user.json","utf-8",(err,data)=>{
-    if(err){
-        console.error("Error reading file:",err);
-    }else{
-        const user=JSON.parse(data);
-        console.log("User data:",user);
-    }
-})
+// fs.readFile("user.json","utf-8",(err,data)=>{
+//     if(err){
+//         console.error("Error reading file:",err);
+//     }else{
+//         const user=JSON.parse(data);
+//         console.log("User data:",user);
+//     }
+// })
+const http = require("http");
+const fs = require("fs");
+const home = fs.readFileSync("abes.html");
+const myserver = http.createServer((req, res) => {
+    res.statusCode = 200;
+    res.setHeader("Content-Type", "text/html");
+    res.end(home);
+    console.log("request received");
+    res.end("welcome to node js");
+});
+myserver.listen(5000, () => {
+    console.log("server is running on port 5000");
+});
