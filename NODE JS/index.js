@@ -82,16 +82,127 @@
 //         console.log("User data:",user);
 //     }
 // })
-const http = require("http");
-const fs = require("fs");
-const home = fs.readFileSync("abes.html");
-const myserver = http.createServer((req, res) => {
-    res.statusCode = 200;
-    res.setHeader("Content-Type", "text/html");
-    res.end(home);
-    console.log("request received");
-    res.end("welcome to node js");
-});
-myserver.listen(5000, () => {
-    console.log("server is running on port 5000");
-});
+
+// const http = require("http");
+// const fs = require("fs");
+// const home = fs.readFileSync("abes.html");
+// const myserver = http.createServer((req, res) => {
+//     res.statusCode = 200;
+//     res.setHeader("Content-Type", "text/html");
+//     res.end(home);
+//     console.log("request received");
+//     res.end("welcome to node js");
+// });
+// myserver.listen(5000, () => {
+//     console.log("server is running on port 5000");
+// });
+// const http = require("http");
+
+// // In-memory storage
+// let users = [];
+
+// const server = http.createServer((req, res) => {
+
+//   //  READ (GET ALL USERS)
+//   if (req.method === "GET" && req.url === "/users") {
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     return res.end(JSON.stringify(users));
+//   }
+
+//   //  CREATE (POST)
+//   if (req.method === "POST" && req.url === "/users") {
+
+//     let body = "";
+
+//     req.on("data", chunk => body += chunk);
+
+//     req.on("end", () => {
+//       const newUser = JSON.parse(body);
+
+//       newUser.id = Date.now(); // unique id
+//       users.push(newUser);
+
+//       res.writeHead(201, { "Content-Type": "application/json" });
+//       res.end(JSON.stringify({
+//         message: "User added",
+//         users
+//       }));
+//     });
+
+//     return;
+//   }
+
+//   // UPDATE (PUT /users/:id)
+//   if (req.method === "PUT" && req.url.startsWith("/users/")) {
+
+//     const id = Number(req.url.split("/")[2]);
+
+//     let body = "";
+
+//     req.on("data", chunk => body += chunk);
+
+//     req.on("end", () => {
+//       const updatedData = JSON.parse(body);
+
+//       const index = users.findIndex(u => u.id === id);
+
+//       if (index === -1) {
+//         res.writeHead(404, { "Content-Type": "application/json" });
+//         return res.end(JSON.stringify({ message: "User not found" }));
+//       }
+
+//       users[index] = { ...users[index], ...updatedData };
+
+//       res.writeHead(200, { "Content-Type": "application/json" });
+//       res.end(JSON.stringify({
+//         message: "User updated",
+//         user: users[index]
+//       }));
+//     });
+
+//     return;
+//   }
+
+//   //  DELETE (DELETE /users/:id)
+//   if (req.method === "DELETE" && req.url.startsWith("/users/")) {
+
+//     const id = Number(req.url.split("/")[2]);
+
+//     const initialLength = users.length;
+//     users = users.filter(u => u.id !== id);
+
+//     if (users.length === initialLength) {
+//       res.writeHead(404, { "Content-Type": "application/json" });
+//       return res.end(JSON.stringify({ message: "User not found" }));
+//     }
+
+//     res.writeHead(200, { "Content-Type": "application/json" });
+//     return res.end(JSON.stringify({ message: "User deleted" }));
+//   }
+
+  
+//   res.writeHead(404, { "Content-Type": "application/json" });
+//   res.end(JSON.stringify({ message: "Route not found" }));
+// });
+
+// server.listen(3000, () => {
+//   console.log("Server running on port 3000");
+// });
+const http =require("http");
+let users=[];
+ const server=http.createServer((req,res)=>{
+if(req.method=='POST'&&req.url=='/users'){
+  let body="";
+  req.on('data',(chunk)=>{
+    body+=chunk;
+  })
+  req.on('end',()=>{
+    const user=JSON.parse(body);
+    users.push(user);
+    res.end("user added");
+  })
+}
+ })
+ server.listen(3000,()=>{
+console.log("Successfully running on server 3000");
+ })
